@@ -4,7 +4,7 @@ const dbConfig = {
   host: process.env.DB_HOST || "127.0.0.1",
   user: process.env.DB_USER || "root",
   password: process.env.DB_PASSWORD || "Grandlane10",
-  database: process.env.DB_NAME || "GineBox",
+  database: process.env.DB_NAME || "ginebox", // Changed from GineBox to ginebox
   port: Number.parseInt(process.env.DB_PORT || "3306"),
 }
 
@@ -14,8 +14,7 @@ export const pool = mysql.createPool({
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,
-  acquireTimeout: 60000,
-  timeout: 60000,
+  // Remove invalid options: acquireTimeout and timeout
 })
 
 // Test database connection
