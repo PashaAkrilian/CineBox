@@ -1,0 +1,116 @@
+console.log("📝 STEP-BY-STEP COMMANDS UNTUK PEMULA")
+console.log("=".repeat(50))
+
+console.log("\n🖥️ CARA BUKA TERMINAL:")
+
+console.log("\nWindows:")
+console.log("• Tekan Win + R")
+console.log("• Ketik: cmd")
+console.log("• Tekan Enter")
+console.log("• Atau: Tekan Win + X, pilih 'Command Prompt'")
+
+console.log("\nMac:")
+console.log("• Tekan Cmd + Space")
+console.log("• Ketik: terminal")
+console.log("• Tekan Enter")
+console.log("• Atau: Applications → Utilities → Terminal")
+
+console.log("\nLinux:")
+console.log("• Tekan Ctrl + Alt + T")
+console.log("• Atau: Klik kanan desktop → Open Terminal")
+
+console.log("\n" + "=".repeat(50))
+console.log("🔧 BASIC COMMANDS:")
+console.log("=".repeat(50))
+
+console.log("\n📁 Navigation Commands:")
+console.log("• dir (Windows) atau ls (Mac/Linux) = Lihat isi folder")
+console.log("• cd nama-folder = Masuk ke folder")
+console.log("• cd .. = Keluar dari folder")
+console.log("• pwd (Mac/Linux) atau cd (Windows) = Lihat lokasi sekarang")
+
+console.log("\n📦 Node.js Commands:")
+console.log("• node --version = Cek versi Node.js")
+console.log("• npm --version = Cek versi npm")
+console.log("• npm install = Install dependencies")
+console.log("• npm run dev = Jalankan development server")
+
+console.log("\n" + "=".repeat(50))
+console.log("🚀 COMPLETE SETUP DARI NOL:")
+console.log("=".repeat(50))
+
+console.log("\nSTEP 1: Install Node.js")
+console.log("1. Buka browser")
+console.log("2. Go to: https://nodejs.org/")
+console.log("3. Download versi LTS (yang hijau)")
+console.log("4. Install seperti software biasa")
+console.log("5. Restart computer")
+
+console.log("\nSTEP 2: Test Node.js")
+console.log("1. Buka terminal")
+console.log("2. Ketik: node --version")
+console.log("3. Harus muncul versi (contoh: v18.17.0)")
+console.log("4. Ketik: npm --version")
+console.log("5. Harus muncul versi (contoh: 9.8.1)")
+
+console.log("\nSTEP 3: Navigate ke project")
+console.log("1. Buka file explorer")
+console.log("2. Cari folder project CineBox")
+console.log("3. Copy path folder (contoh: C:\\Users\\nama\\Desktop\\cinebox)")
+console.log('4. Di terminal, ketik: cd "path-yang-dicopy"')
+console.log("5. Tekan Enter")
+
+console.log("\nSTEP 4: Check project files")
+console.log("1. Di terminal, ketik: dir (Windows) atau ls (Mac/Linux)")
+console.log("2. Harus ada file: package.json")
+console.log("3. Jika tidak ada, Anda di folder yang salah")
+
+console.log("\nSTEP 5: Install dependencies")
+console.log("1. Di terminal, ketik: npm install")
+console.log("2. Tunggu proses download (bisa 5-10 menit)")
+console.log("3. Jika ada error, coba: npm install --force")
+
+console.log("\nSTEP 6: Run development server")
+console.log("1. Di terminal, ketik: npm run dev")
+console.log("2. Tunggu sampai muncul: 'Ready - started server on 0.0.0.0:3000'")
+console.log("3. JANGAN tutup terminal!")
+
+console.log("\nSTEP 7: Test di browser")
+console.log("1. Buka browser (Chrome, Firefox, dll)")
+console.log("2. Ketik di address bar: localhost:3000")
+console.log("3. Tekan Enter")
+console.log("4. Harus muncul halaman CineBox")
+
+console.log("\n" + "=".repeat(50))
+console.log("🚨 TROUBLESHOOTING:")
+console.log("=".repeat(50))
+
+console.log("\nJika STEP 2 gagal (Node.js tidak terdeteksi):")
+console.log("• Restart computer")
+console.log("• Install ulang Node.js")
+console.log("• Pastikan pilih 'Add to PATH' saat install")
+
+console.log("\nJika STEP 4 gagal (package.json tidak ada):")
+console.log("• Pastikan Anda download project CineBox")
+console.log("• Check folder yang benar")
+console.log("• Coba buat project baru: npx create-next-app@latest")
+
+console.log("\nJika STEP 5 gagal (npm install error):")
+console.log("• Check koneksi internet")
+console.log("• Run terminal as administrator")
+console.log("• Coba: npm cache clean --force")
+console.log("• Coba: npm install --legacy-peer-deps")
+
+console.log("\nJika STEP 6 gagal (npm run dev error):")
+console.log("• Coba: npx kill-port 3000")
+console.log("• Coba: npm run dev -- -p 3001")
+console.log("• Delete node_modules, npm install lagi")
+
+console.log("\nJika STEP 7 gagal (browser tidak bisa akses):")
+console.log("• Coba: http://127.0.0.1:3000")
+console.log("• Check firewall/antivirus")
+console.log("• Coba browser lain")
+
+console.log("\n✅ JIKA SEMUA BERHASIL:")
+console.log("Selamat! Next.js sudah running!")
+console.log("Sekarang bisa lanjut ke database setup!")
