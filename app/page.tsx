@@ -17,10 +17,16 @@ export default function HomePage() {
   }, [])
 
   const loadMovies = async () => {
-    setLoading(true)
-    const fetchedMovies = await fetchMovies()
-    setMovies(fetchedMovies)
-    setLoading(false)
+    try {
+      setLoading(true)
+      const fetchedMovies = await fetchMovies()
+      setMovies(fetchedMovies)
+    } catch (error) {
+      console.log("Using fallback data")
+      setMovies([])
+    } finally {
+      setLoading(false)
+    }
   }
 
   // Listen for movie updates
@@ -73,7 +79,10 @@ export default function HomePage() {
 
         {featuredMovies.length === 0 ? (
           <div className="text-center py-12">
-            <p className="text-gray-600 text-lg">No featured movies available at the moment. Check back soon!</p>
+            <p className="text-gray-600 text-lg">No featured movies available. Add some movies to get started!</p>
+            <Button asChild className="mt-4 bg-emerald-600 hover:bg-emerald-700">
+              <Link href="/movies">Add Your First Movie</Link>
+            </Button>
           </div>
         ) : (
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
