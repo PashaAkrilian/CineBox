@@ -1,30 +1,33 @@
-# Cinebox platform design
-
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+# 🎬 CineBox — Movie Rating Platform
 
 [![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/dimaspasha49-6450s-projects/v0-cinebox-platform-design)
 [![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/9zblS9AzpL6)
 
-## Overview
+## 📌 Overview
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+**CineBox** adalah sebuah platform web untuk melihat, memberi rating, dan menulis ulasan film, terinspirasi dari IMDb. Aplikasi ini dibangun menggunakan **Next.js** dan **Tailwind CSS** untuk frontend, serta **MySQL** sebagai basis data utama. Koneksi backend dikonfigurasi melalui API routes dan terintegrasi dengan **Vercel** untuk deployment otomatis.
 
-## Deployment
+## 🌐 Live Deployment
 
-Your project is live at:
+Akses CineBox secara langsung di:
 
-**[https://vercel.com/dimaspasha49-6450s-projects/v0-cinebox-platform-design](https://vercel.com/dimaspasha49-6450s-projects/v0-cinebox-platform-design)**
+🔗 **[https://vercel.com/dimaspasha49-6450s-projects/v0-cinebox-platform-design](https://vercel.com/dimaspasha49-6450s-projects/v0-cinebox-platform-design)**
 
-## Build your app
+## 🛠️ Teknologi yang Digunakan
 
-Continue building your app on:
+- **Frontend:** Next.js, Tailwind CSS
+- **Backend:** API routes (Node.js)
+- **Database:** MySQL (localhost / remote)
+- **Deployment:** Vercel
+- **Design & Prototyping:** [v0.dev](https://v0.dev)
 
-**[https://v0.dev/chat/projects/9zblS9AzpL6](https://v0.dev/chat/projects/9zblS9AzpL6)**
+## ⚙️ Konfigurasi Database
 
-## How It Works
+Pastikan `.env` kamu memiliki konfigurasi berikut:
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+```env
+DB_HOST=127.0.0.1
+DB_USER=root
+DB_PASSWORD=your_password
+DB_NAME=cinebox
+DB_PORT=3306
