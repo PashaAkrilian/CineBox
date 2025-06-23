@@ -54,7 +54,7 @@ export default function MoviesPage() {
   const [isValidating, setIsValidating] = useState(false)
   const [touchedFields, setTouchedFields] = useState<Set<string>>(new Set())
   const fileInputRef = useRef<HTMLInputElement>(null)
-  const validationTimeoutRef = useRef<NodeJS.Timeout>()
+  const validationTimeoutRef = useRef<NodeJS.Timeout | null>(null)
 
   const [formData, setFormData] = useState({
     title: "",
