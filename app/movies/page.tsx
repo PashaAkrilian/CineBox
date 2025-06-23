@@ -257,17 +257,22 @@ export default function MoviesPage() {
     // Clear previous errors
     setFormErrors((prev) => ({ ...prev, image: undefined }))
 
-    // Validate file type
-    const validTypes = ["image/png"]
+    // Validasi tipe file gambar yang didukung
+    const validTypes = [
+      "image/png",
+      "image/jpeg",
+      "image/jpg",
+      "image/webp"
+    ]
     if (!validTypes.includes(file.type)) {
       setFormErrors((prev) => ({
         ...prev,
-        image: "Please upload PNG files only! Current file type: " + file.type,
+        image: "Please upload image files only (PNG, JPG, JPEG, WEBP)! Current file type: " + file.type,
       }))
       return
     }
 
-    // Validate file size (max 2MB)
+    // Validasi ukuran file (maks 2MB)
     const maxSize = 2 * 1024 * 1024 // 2MB in bytes
     if (file.size > maxSize) {
       const sizeMB = (file.size / (1024 * 1024)).toFixed(2)
@@ -278,7 +283,7 @@ export default function MoviesPage() {
       return
     }
 
-    // Validate image dimensions (optional)
+    // Validasi dimensi gambar (opsional)
     const img = new Image()
     img.onload = () => {
       if (img.width < 100 || img.height < 100) {
@@ -289,7 +294,7 @@ export default function MoviesPage() {
         return
       }
 
-      // All validations passed
+      // Semua validasi lolos
       setImageFile(file)
       const reader = new FileReader()
       reader.onload = (event) => {
