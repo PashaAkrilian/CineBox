@@ -258,11 +258,11 @@ export default function MoviesPage() {
     setFormErrors((prev) => ({ ...prev, image: undefined }))
 
     // Validate file type
-    const validTypes = ["image/jpeg", "image/jpg", "image/png"]
+    const validTypes = ["image/png"]
     if (!validTypes.includes(file.type)) {
       setFormErrors((prev) => ({
         ...prev,
-        image: "Please upload JPG, JPEG, or PNG files only! Current file type: " + file.type,
+        image: "Please upload PNG files only! Current file type: " + file.type,
       }))
       return
     }
@@ -579,9 +579,9 @@ export default function MoviesPage() {
                   )}
                 </div>
 
-                {/* Movie Poster Upload - JPG, JPEG, PNG Only */}
+                {/* Movie Poster Upload - PNG Only */}
                 <div>
-                  <Label className="text-sm font-semibold text-slate-700">Movie Poster * (JPG, JPEG, PNG only, max 2MB)</Label>
+                  <Label className="text-sm font-semibold text-slate-700">Movie Poster * (PNG only, max 2MB)</Label>
                   <div className="mt-2">
                     {uploadedImage ? (
                       <div className="relative inline-block">
@@ -623,13 +623,13 @@ export default function MoviesPage() {
                           Upload Movie Poster
                         </p>
                         <p className="text-sm text-slate-500 mb-1">Click to browse or drag and drop</p>
-                        <p className="text-xs text-slate-400">JPG, JPEG, PNG files only, maximum 2MB, minimum 100x100px</p>
+                        <p className="text-xs text-slate-400">PNG files only, maximum 2MB, minimum 100x100px</p>
                       </div>
                     )}
                     <input
                       ref={fileInputRef}
                       type="file"
-                      accept="image/jpeg,image/jpg,image/png"
+                      accept="image/png"
                       onChange={handleImageUpload}
                       className="hidden"
                     />

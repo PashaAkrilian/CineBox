@@ -77,8 +77,7 @@ export async function PUT(request: NextRequest, { params }: { params: { id: stri
 // DELETE - Delete movie
 export async function DELETE(request: NextRequest, { params }: { params: { id: string } }) {
   try {
-    const { id: idStr } = await params
-    const id = Number.parseInt(idStr)
+    const id = Number.parseInt(params.id)
 
     // Check if movie exists
     const [existingMovie] = await pool.execute("SELECT id, title FROM movies WHERE id = ?", [id])
