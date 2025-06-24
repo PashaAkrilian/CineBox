@@ -17,7 +17,7 @@ Akses CineBox secara langsung di:
 
 - **Frontend:** Next.js, Tailwind CSS
 - **Backend:** API routes (Node.js)
-- **Database:** MySQL (localhost / remote)
+- **Database:** MySQL 
 - **Deployment:** Vercel
 - **Design & Prototyping:** [v0.dev](https://v0.dev)
 
